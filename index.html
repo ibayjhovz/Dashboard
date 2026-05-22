@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Sheets Dashboard</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>📊 Business Analytics Dashboard</h1>
+      <p>Live Google Sheets Data</p>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <h3>Total Sales</h3>
+        <h2 id="totalSales">₱0</h2>
+      </div>
+
+      <div class="card">
+        <h3>Total Orders</h3>
+        <h2 id="totalOrders">0</h2>
+      </div>
+
+      <div class="card">
+        <h3>Best Category</h3>
+        <h2 id="bestCategory">-</h2>
+      </div>
+
+      <div class="card">
+        <h3>Average Sale</h3>
+        <h2 id="avgSale">₱0</h2>
+      </div>
+    </section>
+
+    <section class="charts">
+      <div class="chart-box">
+        <h3>Sales Overview</h3>
+        <canvas id="salesChart"></canvas>
+      </div>
+
+      <div class="chart-box">
+        <h3>Category Distribution</h3>
+        <canvas id="categoryChart"></canvas>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <h3>Recent Data</h3>
+
+      <div class="table-container">
+        <table id="dataTable">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
