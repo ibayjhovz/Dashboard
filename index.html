@@ -1,71 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Google Sheets Dashboard</title>
+
+  <title>Office Task Dashboard</title>
 
   <link rel="stylesheet" href="style.css" />
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
+
 <body>
 
   <div class="container">
 
+    <!-- HEADER -->
     <header>
-      <h1>📊 Business Analytics Dashboard</h1>
-      <p>Live Google Sheets Data</p>
+      <h1>📋 Office Task Dashboard</h1>
+      <p>Live Google Sheets Analytics</p>
     </header>
 
+    <!-- KPI CARDS -->
     <section class="cards">
+
       <div class="card">
-        <h3>Total Sales</h3>
-        <h2 id="totalSales">₱0</h2>
+        <h3>Total Tasks</h3>
+        <h2 id="totalTasks">0</h2>
       </div>
 
       <div class="card">
-        <h3>Total Orders</h3>
-        <h2 id="totalOrders">0</h2>
+        <h3>Completed</h3>
+        <h2 id="completedTasks">0</h2>
       </div>
 
       <div class="card">
-        <h3>Best Category</h3>
-        <h2 id="bestCategory">-</h2>
+        <h3>Pending</h3>
+        <h2 id="pendingTasks">0</h2>
       </div>
 
       <div class="card">
-        <h3>Average Sale</h3>
-        <h2 id="avgSale">₱0</h2>
+        <h3>In Progress</h3>
+        <h2 id="progressTasks">0</h2>
       </div>
+
     </section>
 
+    <!-- CHARTS -->
     <section class="charts">
+
       <div class="chart-box">
-        <h3>Sales Overview</h3>
-        <canvas id="salesChart"></canvas>
+        <h3>Task Status Overview</h3>
+        <canvas id="statusChart"></canvas>
       </div>
 
       <div class="chart-box">
-        <h3>Category Distribution</h3>
-        <canvas id="categoryChart"></canvas>
+        <h3>Employee Productivity</h3>
+        <canvas id="employeeChart"></canvas>
       </div>
+
+      <div class="chart-box">
+        <h3>Priority Distribution</h3>
+        <canvas id="priorityChart"></canvas>
+      </div>
+
     </section>
 
+    <!-- TABLE -->
     <section class="table-section">
-      <h3>Recent Data</h3>
+
+      <h3>Task Records</h3>
 
       <div class="table-container">
+
         <table id="dataTable">
+
           <thead></thead>
+
           <tbody></tbody>
+
         </table>
+
       </div>
+
     </section>
 
   </div>
 
   <script src="script.js"></script>
+
 </body>
 </html>
